@@ -28,16 +28,16 @@ static ssize_t count_flag(char *str)
 	size_t count;
 	bool previous_was_percent;
 
-	count = 2;
+	count = 1;
 	i = 0;
-	previous_was_percent = false;
+	previous_was_percent = true;
 	while (str[i] != '\0')
 	{
 		if (str[i] == '%')
 		{
-			if (str[i + 1] == '\0')
-				return (-1);
 			i++;
+			if (str[i] == '\0')
+				return (-1);
 			count++;
 			previous_was_percent = true;
 		}

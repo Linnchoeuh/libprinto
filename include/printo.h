@@ -18,13 +18,17 @@
 
 #include	<stdio.h>
 
+#define 	PRINTO_ABS(n) (((n) < 0) ? (-(n)) : (n))
+
 /**
  * @brief This function is a printf like.
+ * [%%] to write a %.
  * [%d] for an int/long.
  * [%f] for a float/double.
  * [%s] for a str.
  * [%c] for a char.
  * [%B] for a boolean.
+ * [%p] for an adress.
  *
  * @param fd Where you want to write it.
  * @param text The text with the flag.
@@ -54,6 +58,15 @@ char *convert_char(va_list args);
 char *convert_str(va_list args);
 
 char *convert_int(va_list args);
+
+char *int_converter(long num,
+					int base);
+
+char *convert_float(va_list args);
+
+char *convert_bool(va_list args);
+
+char *convert_ptr(va_list args);
 
 // LIB
 

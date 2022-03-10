@@ -13,21 +13,26 @@
 #define NUM_BASE 10
 
 static bool append_number(char **str,
-					long num)
+					long num,
+					int base)
 {
 	bool state;
-	char c[2] = {'0' + (num % NUM_BASE), '\0'};
+	char nums[36] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char c[2] = {nums[num % base], '\0'};
 
-	if (num > NUM_BASE - 1)
-		state = append_number(str, num / NUM_BASE);
+	if (num > base - 1)
+		state = append_number(str, num / base, base);
 	state = printo_str_append(str, c);
 	return (state);
 }
 
-char *int_converter(long num)
+char *int_converter(long num,
+					int base)
 {
 	char *str;
 
+	if (base > 36)
+		return (NULL);
 	if (num < 0)
     {
       	num = -num;
@@ -35,7 +40,7 @@ char *int_converter(long num)
     }
 	else
 		str = printo_strdup("");
-	if (str == NULL || !append_number(&str, num))
+	if (str == NULL || !append_number(&str, num, base))
 	{
 		(str != NULL) ? free(str) : 0;
 		return (NULL);

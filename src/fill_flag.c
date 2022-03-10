@@ -20,10 +20,10 @@ static char *replace_elements(char **split,
 	if ((new_str = printo_strdup("")) == NULL)
 		return (NULL);
 	current_split = split;
+	size_t i = 0;
 	while (current_split[0] != NULL)
 	{
-		value_str = convert_value(current_split[0], args);
-		printf("%s\n", current_split[0]);
+		value_str = convert_element(current_split[0], args);
 		if (value_str == NULL)
 		{
 			free(new_str);
@@ -32,6 +32,7 @@ static char *replace_elements(char **split,
 		printo_str_append(&new_str, value_str);
 		free(value_str);
 		current_split = (&current_split[1]);
+		i++;
 	}
 	return (new_str);
 }

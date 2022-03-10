@@ -1,0 +1,50 @@
+/*
+** *****************************************************************************
+** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
+** Ecole 89 -
+**
+** - fill_flag.c -
+**
+** *****************************************************************************
+*/
+
+#include "printo.h"
+
+static char *replace_elements(char **split,
+					   va_list args)
+{
+	char *new_str;
+	char *value_str;
+	char **current_split;
+
+	if ((new_str = printo_strdup("")) == NULL)
+		return (NULL);
+	current_split = split;
+	while (current_split[0] != NULL)
+	{
+		value_str = convert_value(current_split[0], args);
+		printf("%s\n", current_split[0]);
+		if (value_str == NULL)
+		{
+			free(new_str);
+			return (NULL);
+		}
+		printo_str_append(&new_str, value_str);
+		free(value_str);
+		current_split = (&current_split[1]);
+	}
+	return (new_str);
+}
+
+char *fill_flag(char *str,
+				va_list args)
+{
+	char *new_str;
+	char **split;
+
+	if ((split = split_str_by_flag(str, NULL)) == NULL)
+		return (NULL);
+	new_str = replace_elements(split, args);
+	printo_free_split(split);
+	return (new_str);
+}

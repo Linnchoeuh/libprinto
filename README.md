@@ -1,10 +1,8 @@
 # printo
-
+> You have to include the file `printo.h` in order to use this lib.
 > You must add the -lprinto flag at compilation.
 
-It's not that useful because printf exist but I made it because printf is forbidden in my school.
-
-You have to include the file `printo.h` in order to use this lib.
+It's not that useful because printf exist, but I made it because printf is forbidden in my school. The purpose of this interdiction is to force us to create this kind of lib...
 
 ## Features
 
@@ -18,10 +16,11 @@ The second parameter is just the str you want to write.
 
 The next parameters are infinite and depends of your second parameter.
 
-**printo()** is a printf like function and can support:
+**printo()** support those flags:
   - int/long (%d)
   - float/double (%f)
   - char (%c)
   - str (%s)
   - boolean (%B)
   - pointer (%p)
+

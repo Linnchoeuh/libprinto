@@ -9,7 +9,7 @@ It's not that useful because printf exist but I made it because printf is forbid
 This lib has two major function : **printo()** and  **generate_str()**
 
 - **printo()** is a printf like function and can support:
-  - > The usage is very similar to printf, but you also have to give at first parameter the output (where you want to write it)
+  > The usage is very similar to printf, but you also have to give at first parameter the output (where you want to write it)
   - int/long (%d)
   - float/double (%f)
   - pointer (%p)

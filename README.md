@@ -49,7 +49,7 @@ Output :
 ```
 $> gcc main.c -lprinto
 $> ./a.out
-Hey! This an example where I add the number 3 to show you how it work
+Hey! This an example where I add the number 3 to show you how it work.
 ```
 
 ### generate_str()

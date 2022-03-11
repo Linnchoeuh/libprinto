@@ -17,7 +17,7 @@ The second parameter is just the str you want to write.
 
 The next parameters are infinite and depends of your second parameter.
 
-**printo()** support those [flags](#supported-flags-:).
+**printo()** support those [flags](#supported-flags).
   
 
 **Example :**
@@ -70,7 +70,7 @@ $> ./a.out
 Hey! This an example where I add the number 3 to show you how it work. Really similar to printf isn't it?
 ```
 
-# Supported flags :
+# Supported flags
   - int/long (%d) *The function support int and long with the same flag not like printf.*
   - float/double (%f)
   - char (%c)

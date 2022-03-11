@@ -7,7 +7,13 @@ This lib is not that useful because printf exist, but I made it because printf i
 
 ## Usage
 
-ye
+Use the make file to compile the lib.
+
+`make` will gives you a the .a file
+
+`make install` will install the library and the include in `/home/$LOGNAME/.froot/`
+
+`make uninstall` will remove the library from your computer.
 
 ## Features
 
@@ -84,10 +90,13 @@ $> ./a.out
 Hey! This another test with a boolean at the state true!
 ```
 
-# Supported flags
+## Supported flags
   - int/long (%d) *The function support int and long with the same flag not like printf.*
   - float/double (%f)
   - char (%c)
   - str (%s)
   - boolean (%B)
   - pointer (%p)
+
+## Issues
+No issues to deplore, nor than memory memory or leak. But feel free to report bug :).

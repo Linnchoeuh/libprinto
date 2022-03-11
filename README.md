@@ -1,5 +1,8 @@
 # printo
-A printf like function. This function is able to print: 
+-A printf like lib. 
+##Features
+This lib has to major function : printo and 
+This function is able to print: 
   -int/long (%d)
   -float/double (%f)
   -pointer (%p)

@@ -42,3 +42,35 @@ $> ./a.out
 Hey! This an example where I add the number 3 to show you how it work. Really similar to printf isn't it?
 ```
 
+### generate_str()
+
+The usage is like **[printo](#printo)
+
+The second parameter is just the str you want to write.
+
+The next parameters are infinite and depends of your second parameter.
+
+**printo()** support those flags:
+  - int/long (%d) *The function support int and long with the same flag not like printf.*
+  - float/double (%f)
+  - char (%c)
+  - str (%s)
+  - boolean (%B)
+  - pointer (%p)
+
+**Example :**
+```c
+#include <printo.h>
+
+int main(void)
+{
+  printo(1, "Hey! This example print the number %d to show you how it work. Pretty similar to printf isn't it?", 3);
+  return (0);
+}
+```
+Output : 
+```
+$> gcc main.c -lprinto
+$> ./a.out
+Hey! This an example where I add the number 3 to show you how it work. Really similar to printf isn't it?
+```

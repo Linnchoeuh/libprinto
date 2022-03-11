@@ -2,7 +2,7 @@
 
 A printf like lib. 
 
-##Features
+## Features
 
 This lib has to major function : printo and 
 This function is able to print: 

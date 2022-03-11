@@ -8,7 +8,7 @@
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_baselib.h"
 
 int	printo_strcmp(const char *str1,
 				const char *str2)

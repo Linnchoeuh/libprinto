@@ -8,7 +8,7 @@
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_converter.h"
 
 #define MAX_FLOATING_NUM 6
 
@@ -46,7 +46,7 @@ char *convert_float(va_list args)
 	num = va_arg(args, double);
 	int_part = (long) num;
 	float_part = PRINTO_ABS(num - (double) int_part);
-	str = int_converter(int_part, 10);
+	str = int_converter_base(int_part, NUM_BASE);
 	printo_str_append(&str, ".");
 	c[1] = '\0';
 	float_num_count = 0;

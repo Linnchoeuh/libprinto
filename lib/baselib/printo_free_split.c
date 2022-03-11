@@ -10,7 +10,7 @@
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_baselib.h"
 
 void printo_free_split(char **splitted)
 {

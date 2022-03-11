@@ -16,74 +16,87 @@
 #include	<stdbool.h>
 #include	<stdarg.h>
 
-#include	<stdio.h>
-
-#define 	PRINTO_ABS(n) (((n) < 0) ? (-(n)) : (n))
+#include	"printo_baselib.h"
+#include 	"printo_macro.h"
+#include 	"printo_converter.h"
 
 /**
  * @brief This function is a printf like.
- * [%%] to write a %.
- * [%d] for an int/long.
- * [%f] for a float/double.
- * [%s] for a str.
- * [%c] for a char.
- * [%B] for a boolean.
- * [%p] for an adress.
+ *
+ * @tparam %% to write a %.
+ * @tparam %d for an int/long.
+ * @tparam %f for a float/double.
+ * @tparam %s for a str.
+ * @tparam %c for a char.
+ * @tparam %B for a boolean.
+ * @tparam %p for an adress.
  *
  * @param fd Where you want to write it.
  * @param text The text with the flag.
- * @param ...
+ * @param ... The value to replace the %flag
  */
 void printo(int fd,
 			char *text,
 			...);
 
+
+/**
+ * @brief Take an str with %flags and return a str with
+ * %flag by valur in the va_list.
+ *
+ * @tparam %% to write a %.
+ * @tparam %d for an int/long.
+ * @tparam %f for a float/double.
+ * @tparam %s for a str.
+ * @tparam %c for a char.
+ * @tparam %B for a boolean.
+ * @tparam %p for an adress.
+ *
+ * @param text The text with the flag.
+ * @param ... The value to replace the %flag
+ *
+ * @return char* with replaced value in place of %flag and NULL on failure.
+ */
+char *generate_str(char *text,
+				   ...);
+
+
+/**
+ * @brief Replace the %flag by the corresponding value in va_arg.
+ *
+ * @param str The str with their %flag in.
+ * @param args va_list that contain values to replace the %flag.
+ *
+ * @return char* with replaced value in place of %flag
+ * and NULL on failure.
+ */
 char *fill_flag(char *str,
 				va_list args);
 
-int	printo_base(ssize_t	nbr,
-		       unsigned int	base);
 
+/**
+ * @brief Split a char* at each %flag found.
+ *
+ * @param str The str with their %flag in.
+ * @param split_len You can get the len of the split,
+ * but you can set at NULL if you don't want it.
+ *
+ * @return char** with NULL at the end. re
+ */
 char **split_str_by_flag(char *str,
 						 ssize_t *split_len);
 
+/**
+ * @brief Add at the next of target str, the merge content.
+ * The fusion of this will be in target.
+ *
+ * @param target A overreferenced char* that will be edited.
+ * @param merge The part that will be added at the target
+ *
+ * @return true on success, false on failure
+ */
 bool printo_str_append(char **target,
 				   		char *merge);
-
-char *convert_element(char *elem,
-					va_list args);
-
-char *convert_char(va_list args);
-
-char *convert_str(va_list args);
-
-char *convert_int(va_list args);
-
-char *int_converter(long num,
-					int base);
-
-char *convert_float(va_list args);
-
-char *convert_bool(va_list args);
-
-char *convert_ptr(va_list args);
-
-// LIB
-
-size_t printo_strlen(char *str);
-
-size_t printo_strnlen(const char *s,
-					size_t	   n);
-
-char *printo_strdup(char *s);
-
-char *printo_strndup(const char	*s,
-				size_t	n);
-
-int	printo_strcmp(const char *str1,
-				const char *str2);
-
-void printo_free_split(char **splitted);
 
 #endif  /*      __PRINTO_H__    */
 

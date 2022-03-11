@@ -3,27 +3,21 @@
 ** lenny.vigeon
 ** lenny.vigeon <lenny.vigeon@student-station>
 **
-** printo_strdup.c - 2022
+** printo_strnlen.c - 2022
 **
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_baselib.h"
 
-char *printo_strdup(char *s)
+size_t printo_strnlen(const char *s,
+					size_t	   n)
 {
-	int  i;
-	char *str;
+	size_t	i;
 
 	i = 0;
-	if ((str = malloc(printo_strlen(s) + 1)) == NULL)
-		return (NULL);
-	while (s[i] != 0)
-	{
-		str[i] = s[i];
+	while (s[i] != '\0' && i < n)
 		++i;
-	}
-	str[i] = '\0';
-	return (str);
+	return (i);
 }
 

@@ -8,7 +8,7 @@
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_converter.h"
 
 char *convert_ptr(va_list args)
 {
@@ -17,15 +17,13 @@ char *convert_ptr(va_list args)
 
 	if ((ptr_str = printo_strdup("0x")) == NULL)
 		return (NULL);
-	printf("oui\n");
-	if ((adr = int_converter((long) va_arg(args, long), 16)) == NULL ||
-		!printo_str_append(&ptr_str, adr))
+	adr = int_converter_base((long) va_arg(args, long), PTR_BASE);
+	if (adr == NULL || !printo_str_append(&ptr_str, adr))
 	{
 		(adr != NULL) ? free(adr) : 0;
 		free(ptr_str);
 		return (NULL);
 	}
 	free(adr);
-	printf("oui\n");
 	return (ptr_str);
 }

@@ -8,8 +8,9 @@ SRC = $(shell find ./ -name "*.c")
 OBJ = $(SRC:.c=.o)
 ECHO = /bin/echo -e
 INCLUDEPATH = ./include/
-INCLUDEFILE = $(shell find $(INCLUDEPATH)*.h -type f -printf "%f\n")
+INCLUDEFILE = $(shell find $(INCLUDEPATH)*.h)
 INSTALLPATH = /home/${LOGNAME}/.froot/
+INCLUDEFILENAME = $(shell find $(INCLUDEPATH)*.h -type f -printf "$(INSTALLPATH)include/%f\n")
 CFLAG = -g3 -std=c11
 ERRCFLAG = -Wextra -Wall -Werror
 
@@ -40,7 +41,8 @@ clean:
 fclean:
 	@find . -name "*.so" -delete -or -name "*.exe" -delete \
         -or -name "*.a" -delete -or -name "*.o" -delete    \
-        -or -name "*~" -delete -or -name "vgcore*" -delete
+        -or -name "*~" -delete -or -name "vgcore*" -delete \
+		-or -name "a.out" -delete
 	@$(ECHO) $(GREEN) "All temporal file deleted!" $(DEFLT)
 	@find -name $(FULLNAME) -delete
 	@$(ECHO) $(GREEN) "Executable deleted!" $(DEFLT)
@@ -49,12 +51,12 @@ re: 	fclean all
 
 install:	all
 	@mv $(FULLNAME) $(INSTALLPATH)lib/$(FULLNAME)
-	@cp $(INCLUDEPATH)$(INCLUDEFILE) $(INSTALLPATH)include/
+	@cp $(INCLUDEFILE) $(INSTALLPATH)include/
 	@$(ECHO) $(GREEN) "Library installed!" $(DEFLT)
 
 reinstall : fclean install
 
 uninstall:
-	@rm  $(INSTALLPATH)lib/$(FULLNAME)
-	@rm  $(INSTALLPATH)include/$(INCLUDEFILE)
+	@rm -f $(INSTALLPATH)lib/$(FULLNAME)
+	@rm -f $(INCLUDEFILENAME)
 	@$(ECHO) $(GREEN) "Library deleted!" $(DEFLT)

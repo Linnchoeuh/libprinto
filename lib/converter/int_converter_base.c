@@ -3,12 +3,12 @@
 ** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
 ** Ecole 89 -
 **
-** - convert_int.c -
+** - int_converter_base.c -
 **
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_converter.h"
 
 #define NUM_BASE 10
 
@@ -26,7 +26,7 @@ static bool append_number(char **str,
 	return (state);
 }
 
-char *int_converter(long num,
+char *int_converter_base(long num,
 					int base)
 {
 	char *str;

@@ -8,7 +8,7 @@
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_baselib.h"
 
 size_t printo_strlen(char *str)
 {

@@ -8,27 +8,24 @@
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_converter.h"
 
 char *convert_element(char *elem,
 					va_list args)
 {
+	size_t i;
+
 	if (elem[0] != '%')
 		return (printo_strdup(elem));
 	elem++;
-	if (elem[0] == '%')
+	if (elem[0] == FLAGS[F_PERCENT])
 		return (printo_strdup("%"));
-	if (elem[0] == 'c')
-		return(convert_char(args));
-	if (elem[0] == 's')
-		return(convert_str(args));
-	if (elem[0] == 'd')
-		return(convert_int(args));
-	if (elem[0] == 'f')
-		return(convert_float(args));
-	if (elem[0] == 'B')
-		return(convert_bool(args));
-	if (elem[0] == 'p')
-		return(convert_ptr(args));
+	i = 0;
+	while (i < NB_OF_CONVERTER)
+	{
+		if (elem[0] == FLAGS[i + 1])
+			return(CONVERT_FUNC[i](args));
+		i++;
+	}
 	return (NULL);
 }

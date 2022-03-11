@@ -3,16 +3,17 @@
 ** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
 ** Ecole 89 -
 **
-** - convert_bool.c -
+** - convert_str.c -
 **
 ** *****************************************************************************
 */
 
-#include "printo.h"
+#include "printo_converter.h"
 
-char *convert_bool(va_list args)
+char *convert_str(va_list args)
 {
-	if ((int) va_arg(args, int))
-		return (printo_strdup("true"));
-	return (printo_strdup("false"));
+	char *str;
+
+	str = (char*) va_arg(args, char*);
+	return (printo_strdup(str));
 }

@@ -1,7 +1,7 @@
 # printo
 > You have to include the file `printo.h` in order to use this lib.
 
-> You must add the -lprinto flag at compilation.
+> You must add the -l printo flag at compilation.
 
 This lib is not that useful because printf exist, but I made it because printf is forbidden in my school. The purpose of this interdiction is to force us to create this kind of lib... (Still I'm proud to say that I've created a printf like function)
 

@@ -18,7 +18,7 @@ The second parameter is just the str you want to write.
 
 The next parameters are infinite and depends of your second parameter.
 
-- **printo()** is a printf like function and can support:
+**printo()** is a printf like function and can support:
   - int/long (%d)
   - float/double (%f)
   - char (%c)

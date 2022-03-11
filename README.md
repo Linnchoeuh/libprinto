@@ -27,11 +27,13 @@ The next parameters are infinite and depends of your second parameter.
 
 **Example :**
 ```c
+#include <printo.h>
+
 int main(void)
 {
-  printo(1, "Hey! This an example where I add the number %d to show you how it work. Really similar to printf isn't it?", 3);
+  printo(1, "Hey! This example print the number %d to show you how it work. Pretty similar to printf isn't it?", 3);
   return (0);
 }
 ```
-Output : `Hey! This an example where I add the number %d to show you how it work. Really similar to printf isn't it?`
+Output : `Hey! This an example where I add the number 3 to show you how it work. Really similar to printf isn't it?`
 

@@ -26,4 +26,3 @@ void printo_free_split(char **splitted)
 	}
 	free(splitted);
 }
-

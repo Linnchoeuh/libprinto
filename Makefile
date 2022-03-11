@@ -1,9 +1,15 @@
-CC = gcc
 NAME = printo
+CC = gcc
+CCLIB = ar
+PREFIX = lib
+EXTENSION = .a
+FULLNAME = $(PREFIX)$(NAME)$(EXTENSION)
 SRC = $(shell find ./ -name "*.c")
 OBJ = $(SRC:.c=.o)
 ECHO = /bin/echo -e
-INCLUDE = -I./include
+INCLUDEPATH = ./include/
+INCLUDEFILE = $(shell find $(INCLUDEPATH)*.h -type f -printf "%f\n")
+INSTALLPATH = /home/${LOGNAME}/.froot/
 CFLAG = -g3 -std=c11
 ERRCFLAG = -Wextra -Wall -Werror
 
@@ -15,19 +21,17 @@ RED		=	"\033[0;31m"
 BLINK 	= 	"\033[1;92m"
 SBLINK	= 	"\033[0m"
 
-all:$(NAME)
-
-build :		$(ECHO) $(BLINK) "[SUCCESS]" $(DEFLT)
+all:$(FULLNAME)
 
 %.o : %.c
-	@ $(CC) -o $@ -c $< $(INCLUDE) $(CFLAG) $(ERRCFLAG) && \
+	@ $(CC) -o $@ -c $< -I$(INCLUDEPATH) $(CFLAG) $(ERRCFLAG) && \
 	$(ECHO) $(BLINK) "[OK]"$(SBLINK) $(PINK) $< $(DEFLT) || \
 	$(ECHO) $(RED) "[KO]" $(PINK) $< $(DEFLT)
 
-$(NAME):$(OBJ)
-	@ $(CC) -o $@ $^ $(INCLUDE) $(CFLAG) $(ERRCFLAG) && \
-	$(ECHO) $(BLINK) "[OK]"$(SBLINK) $(PINK) $(NAME) $(DEFLT) || \
-	$(ECHO) $(RED) "[KO]" $(TEAL) $(NAME) $(DEFLT)
+$(FULLNAME):$(OBJ)
+	@ $(CCLIB) -rsc $(FULLNAME) $(OBJ) && \
+	$(ECHO) $(BLINK) "[LIB - OK]"$(SBLINK) $(PINK) $(FULLNAME) $(DEFLT) || \
+	$(ECHO) $(RED) "[LIB - KO]" $(TEAL) $(FULLNAME) $(DEFLT)
 
 clean:
 	@ find -name "*.o" -delete && find -name "*~" -delete && \
@@ -38,21 +42,19 @@ fclean:
         -or -name "*.a" -delete -or -name "*.o" -delete    \
         -or -name "*~" -delete -or -name "vgcore*" -delete
 	@$(ECHO) $(GREEN) "All temporal file deleted!" $(DEFLT)
-	@find -name $(NAME) -delete
+	@find -name $(FULLNAME) -delete
 	@$(ECHO) $(GREEN) "Executable deleted!" $(DEFLT)
 
-re: 		fclean all
-
-run: $(OUT)
-	./$(OUT)
-
-w:
-	$(CC) $(SRC) -o $(NAME) $(INCLUDE) $(CFLAG)
+re: 	fclean all
 
 install:	all
-	@sudo mv $(NAME) /usr/bin/
-	@$(ECHO) $(GREEN) "Program installed!" $(DEFLT)
+	@mv $(FULLNAME) $(INSTALLPATH)lib/$(FULLNAME)
+	@cp $(INCLUDEPATH)$(INCLUDEFILE) $(INSTALLPATH)include/
+	@$(ECHO) $(GREEN) "Library installed!" $(DEFLT)
+
+reinstall : fclean install
 
 uninstall:
-	@sudo rm -i /usr/bin/$(NAME)
-	@$(ECHO) $(GREEN) "Program deleted!" $(DEFLT)
+	@rm  $(INSTALLPATH)lib/$(FULLNAME)
+	@rm  $(INSTALLPATH)include/$(INCLUDEFILE)
+	@$(ECHO) $(GREEN) "Library deleted!" $(DEFLT)

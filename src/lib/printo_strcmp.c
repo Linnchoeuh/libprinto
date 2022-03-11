@@ -20,4 +20,3 @@ int	printo_strcmp(const char *str1,
 		i++;
 	return (str2[i] - str1[i]);
 }
-

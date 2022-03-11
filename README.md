@@ -35,5 +35,10 @@ int main(void)
   return (0);
 }
 ```
-Output : `Hey! This an example where I add the number 3 to show you how it work. Really similar to printf isn't it?`
+Output : 
+```bash
+$> gcc main.c -lprinto
+$> ./a.out
+Hey! This an example where I add the number 3 to show you how it work. Really similar to printf isn't it?
+```
 

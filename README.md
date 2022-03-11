@@ -1,5 +1,5 @@
 # printo
--A printf like lib. 
+>A printf like lib. 
 ##Features
 This lib has to major function : printo and 
 This function is able to print: 

@@ -44,7 +44,7 @@ Hey! This an example where I add the number 3 to show you how it work. Really si
 
 ### generate_str()
 
-The usage is like **[printo()](###printo())**
+The usage is like [printo()](#printo())
 
 The second parameter is just the str you want to write.
 

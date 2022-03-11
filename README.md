@@ -41,7 +41,7 @@ The next parameters are infinite and depends of your second parameter.
 
 int main(void)
 {
-  printo(1, "Hey! This example print the number %d to show you how it work. Pretty similar to printf isn't it?", 3);
+  printo(1, "Hey! This example print the number %d to show you how it work.", 3);
   return (0);
 }
 ```
@@ -49,7 +49,7 @@ Output :
 ```
 $> gcc main.c -lprinto
 $> ./a.out
-Hey! This an example where I add the number 3 to show you how it work. Really similar to printf isn't it?
+Hey! This an example where I add the number 3 to show you how it work
 ```
 
 ### generate_str()
@@ -99,4 +99,4 @@ Hey! This another test with a boolean at the state true!
   - pointer (%p)
 
 ## Issues
-No issues to deplore, nor than memory memory or leak. But feel free to report bug :).
+No issues to deplore, nor than memory error or leak. But feel free to report bug :).

@@ -1,4 +1,4 @@
-# printo
+# libprinto
 > You have to include the file `printo.h` in order to use this lib.
 
 > You must add the -l printo flag at compilation.
@@ -17,7 +17,7 @@ Use the make file to compile the lib.
 
 ## Features
 
-This lib has two major function : **printo()** and  **generate_str()**
+This lib has two major function : [**printo()**](#printo) and  [**generate_str()**](#generate_str)
 
 ### printo()
 
@@ -32,7 +32,7 @@ The second parameter is just the str you want to write.
 
 The next parameters are infinite and depends of your second parameter.
 
-**printo()** support those [flags](#supported-flags).
+**printo()** support those [formats](#supported-formats).
   
 
 **Example :**
@@ -67,7 +67,7 @@ The first parameter is just the str you want to write.
 
 The next parameters are infinite and depends of your second parameter.
 
-**generate_str()** support those [flags](#supported-flags).
+**generate_str()** support those [formats](#supported-formats).
 
 **Example :**
 ```c
@@ -90,8 +90,8 @@ $> ./a.out
 Hey! This another test with a boolean at the state true!
 ```
 
-## Supported flags
-  - int/long (%d) *The function support int and long with the same flag not like printf.*
+## Supported formats
+  - int/long (%d) *The function support int and long with the same format not like printf.*
   - float/double (%f)
   - char (%c)
   - str (%s)

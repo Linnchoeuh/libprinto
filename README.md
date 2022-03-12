@@ -3,6 +3,8 @@
 
 > You must add the -l printo flag at compilation.
 
+**There's more info about each function in the .h files of the library** 
+
 This lib is not that useful because printf exist, but I made it because printf is forbidden in my school. The purpose of this interdiction is to force us to create this kind of lib... (Still I'm proud to say that I've created a printf like function)
 
 ## Usage

@@ -7,7 +7,7 @@ This lib is not that useful because printf exist, but I made it because printf i
 
 ## Usage
 
-Use the make file to compile the lib.
+Use the makefile to compile the lib.
 
 `make` will gives you a .a file
 

@@ -37,13 +37,13 @@ static char *replace_elements(char **split,
 	return (new_str);
 }
 
-char *fill_flag(char *str,
+char *fill_format(char *str,
 				va_list args)
 {
 	char *new_str;
 	char **split;
 
-	if ((split = split_str_by_flag(str, NULL)) == NULL)
+	if ((split = split_str_by_format(str, NULL)) == NULL)
 		return (NULL);
 	new_str = replace_elements(split, args);
 	printo_free_split(split);

@@ -18,7 +18,7 @@ void printo(int fd,
 	va_list args;
 
 	va_start(args, text);
-	assembled_text = fill_flag(text, args);
+	assembled_text = fill_format(text, args);
 	va_end(args);
 	if (assembled_text != NULL)
 	{

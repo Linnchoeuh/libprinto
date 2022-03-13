@@ -79,7 +79,7 @@ static bool cut_str(char **target,
 	return (true);
 }
 
-char **split_str_by_flag(char *str,
+char **split_str_by_format(char *str,
 						 ssize_t *split_len)
 {
 	char **split;

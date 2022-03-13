@@ -17,7 +17,7 @@ char *generate_str(char *text,
 	va_list args;
 
 	va_start(args, text);
-	assembled_text = fill_flag(text, args);
+	assembled_text = fill_format(text, args);
 	va_end(args);
 	return (assembled_text);
 }

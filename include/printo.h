@@ -39,6 +39,24 @@ void printo(int fd,
 			char *text,
 			...);
 
+/**
+ * @brief This function is a printf like. It work the same way as printo but
+ * the otuput will be always STDOUT
+ *
+ * @tparam %% to write a %.
+ * @tparam %d for an int/long.
+ * @tparam %f for a float/double.
+ * @tparam %s for a str.
+ * @tparam %c for a char.
+ * @tparam %B for a boolean.
+ * @tparam %p for an adress.
+ *
+ * @param text The text with the format.
+ * @param ... The value to replace the %format
+ */
+void sprinto(char *text,
+			 ...);
+
 
 /**
  * @brief Take an str with %formats and return a str with

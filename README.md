@@ -30,6 +30,9 @@ void printo(int fd, char *text, ...);
 
 The usage is very similar to printf, but you have to give at first parameter the output (where you want to write it), it makes possible to write in a file descriptor instead of the standard output.
 
+> **sprinto** exist if you only want to write on STDOUT. 
+> The protoype is the same except that there's no **fd** parameter.
+
 The second parameter is just the str you want to write.
 
 The next parameters are infinite and depends of your second parameter.

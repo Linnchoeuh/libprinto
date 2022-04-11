@@ -25,15 +25,15 @@ This lib has two major function : [**printo()**](#printo) and  [**generate_str()
 
 **Prototype :**
 ```c
-void printo(int fd, char *text, ...);
+void printo(char *text, ...);
 ```
 
-The usage is very similar to printf, but you have to give at first parameter the output (where you want to write it), it makes possible to write in a file descriptor instead of the standard output.
+The usage is very similar to printf, 
 
-> **sprinto()** exist if you only want to write on STDOUT. 
-> The protoype is the same as **printo()** except that there's no **fd** parameter.
+> **fprinto()** exist if you want to write in a file descriptor instead of STDOUT. 
+> The protoype is the same as **printo()** except that there's a **fd** parameter. ```void fprinto(int fd, char *text, ...);```
 
-The second parameter is just the str you want to write.
+The first parameter is just the str you want to write.
 
 The next parameters are infinite and depends of your second parameter.
 
@@ -46,7 +46,7 @@ The next parameters are infinite and depends of your second parameter.
 
 int main(void)
 {
-  printo(1, "Hey! This example print the number %d to show you how it work.", 3);
+  printo("Hey! This example print the number %d to show you how it work.", 3);
   return (0);
 }
 ```

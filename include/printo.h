@@ -21,25 +21,6 @@
 #include 	"printo_converter.h"
 
 /**
- * @brief This function is a printf like.
- *
- * @tparam %% to write a %.
- * @tparam %d for an int/long.
- * @tparam %f for a float/double.
- * @tparam %s for a str.
- * @tparam %c for a char.
- * @tparam %B for a boolean.
- * @tparam %p for an adress.
- *
- * @param fd Where you want to write it.
- * @param text The text with the format.
- * @param ... The value to replace the %format
- */
-void printo(int fd,
-			char *text,
-			...);
-
-/**
  * @brief This function is a printf like. It work the same way as printo but
  * the otuput will be always STDOUT
  *
@@ -54,8 +35,28 @@ void printo(int fd,
  * @param text The text with the format.
  * @param ... The value to replace the %format
  */
-void sprinto(char *text,
+void printo(char *text,
 			 ...);
+
+
+/**
+ * @brief This function is a printf like.
+ *
+ * @tparam %% to write a %.
+ * @tparam %d for an int/long.
+ * @tparam %f for a float/double.
+ * @tparam %s for a str.
+ * @tparam %c for a char.
+ * @tparam %B for a boolean.
+ * @tparam %p for an adress.
+ *
+ * @param fd Where you want to write it.
+ * @param text The text with the format.
+ * @param ... The value to replace the %format
+ */
+void fprinto(int fd,
+			char *text,
+			...);
 
 
 /**

@@ -3,15 +3,16 @@
 ** lenny.vigeon <lenny.vigeon@stu018.cst.bunny.local>
 ** Ecole 89 -
 **
-** - sprinto.c -
+** - printo.c -
 **
 ** *****************************************************************************
 */
 
 #include "printo.h"
 
-void sprinto(char *text,
-			 ...)
+void fprinto(int fd,
+			char *text,
+			...)
 {
 	char *assembled_text;
 	va_list args;
@@ -21,7 +22,7 @@ void sprinto(char *text,
 	va_end(args);
 	if (assembled_text != NULL)
 	{
-		write(STDOUT_FILENO, assembled_text, printo_strlen(assembled_text));
+		write(fd, assembled_text, printo_strlen(assembled_text));
 		free(assembled_text);
 	}
 }

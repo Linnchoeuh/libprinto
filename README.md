@@ -1,7 +1,7 @@
 # libprinto
 > You have to include the file `printo.h` in order to use this lib.
 
-> You must add the -lprinto flag at compilation.
+> You must add the libprinto in the gcc line.
 
 **There's more info about each function in the .h files of the library** 
 
@@ -35,7 +35,7 @@ The usage is very similar to printf,
 
 The first parameter is just the str you want to write.
 
-The next parameters are infinite and depends of your second parameter.
+The next parameters are infinite and depends of your first parameter.
 
 **printo()** support those [formats](#supported-formats).
   
@@ -70,7 +70,7 @@ The usage is similar to **printo()**, but has two differencies.
 
 The first parameter is just the str you want to write.
 
-The next parameters are infinite and depends of your second parameter.
+The next parameters are infinite and depends of your first parameter.
 
 **generate_str()** support those [formats](#supported-formats).
 

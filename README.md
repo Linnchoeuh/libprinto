@@ -65,7 +65,7 @@ char *generate_str(char *text, ...);
 ```
 
 The usage is similar to **printo()**, but has two differencies.
-- You don't need to precise the output because this function doesn't print antyhing.
+- You don't need to precise the output because this function doesn't print anything.
 - The function return the char* instead of print it. 
 
 The first parameter is just the str you want to write.

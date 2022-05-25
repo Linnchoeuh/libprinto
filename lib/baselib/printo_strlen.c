@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu018.cst.bunny.local>
-** Ecole 89 -
-**
-** - printo_strlen.c -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo_strlen.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo_baselib.h"
 

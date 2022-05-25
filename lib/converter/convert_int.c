@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
-** Ecole 89 -
-**
-** - convert_int.c -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file convert_int.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo_converter.h"
 

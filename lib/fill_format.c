@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
-** Ecole 89 -
-**
-** - fill_flag.c -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file fill_format.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo.h"
 

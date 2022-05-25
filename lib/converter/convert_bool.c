@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
-** Ecole 89 -
-**
-** - convert_bool.c -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file convert_bool.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo_converter.h"
 

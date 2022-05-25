@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon
-** lenny.vigeon <lenny.vigeon@student-station>
-**
-** printo_strnlen.c - 2022
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo_strnlen.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo_baselib.h"
 

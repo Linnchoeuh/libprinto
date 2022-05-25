@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu018.cst.bunny.local>
-** Ecole 89 -
-**
-** - printo_macro.h -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo_macro.h
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #ifndef		__PRINTO_MACRO_H__
 #define		__PRINTO_MACRO_H__
@@ -27,14 +23,6 @@ typedef enum e_flag_type
     NB_OF_FLAGS // always be at the end
   }			t_flag_type;
 
-#define FLAGS ({char flags[NB_OF_FLAGS]; \
-	flags[F_PERCENT] = '%';	\
-	flags[F_INT] = 'd';		\
-	flags[F_FLOAT] = 'f';	\
-	flags[F_STR] = 's';		\
-	flags[F_CHAR] = 'c';	\
-	flags[F_BOOL] = 'B';	\
-	flags[F_PTR] = 'p';		\
-    flags;})
+const char FLAGS[NB_OF_FLAGS] = "%dfscBp";
 
 #endif  /*      __PRINTO_MACRO_H__    */

@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
-** Ecole 89 -
-**
-** - printo_str_append.c -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo_str_append.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo.h"
 

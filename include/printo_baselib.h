@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu018.cst.bunny.local>
-** Ecole 89 -
-**
-** - printo_baselib.h -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo_baselib.h
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #ifndef		__PRINTO_BASELIB_H__
 #define		__PRINTO_BASELIB_H__

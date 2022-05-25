@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu018.cst.bunny.local>
-** Ecole 89 -
-**
-** - generate_str.h -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file generate_str.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo.h"
 

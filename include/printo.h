@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu018.cst.bunny.local>
-** Ecole 89 -
-**
-** - printo.h -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo.h
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #ifndef		__PRINTO_H__
 #define		__PRINTO_H__

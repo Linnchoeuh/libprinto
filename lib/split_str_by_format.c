@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu003.cst.bunny.local>
-** Ecole 89 -
-**
-** - assemble_str.c -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file split_str_by_format.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo.h"
 

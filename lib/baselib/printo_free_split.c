@@ -1,14 +1,9 @@
-/*
-** *****************************************************************************
-** lenny.vigeon
-** lenny.vigeon <lenny.vigeon@student-station>
-**
-** printo_free_split.c - 2022
-**
-** Entirely free all the occurence if a char **
-** At least require a NULL pointer at the end of the char **
-** *****************************************************************************
-*/
+/**
+ ** @file printo_free_split.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief Entirely free all the occurence if a char **
+ ** At least require a NULL pointer at the end of the char **
+ **/
 
 #include "printo_baselib.h"
 

@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@csr-pi03.ecole-89.com>
-** Ecole 89 - 14/02/2022 10:00:00
-**
-** - printo_strcmp.c -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo_strcmp.c
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #include "printo_baselib.h"
 

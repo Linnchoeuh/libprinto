@@ -1,12 +1,8 @@
-/*
-** *****************************************************************************
-** lenny.vigeon <lenny.vigeon@stu018.cst.bunny.local>
-** Ecole 89 -
-**
-** - printo_converter.h -
-**
-** *****************************************************************************
-*/
+/**
+ ** @file printo_converter.h
+ ** @author Lenny Vigeon [lenny.vigeon@gmail.com]
+ ** @brief
+ **/
 
 #ifndef		__PRINTO_CONVERTER_H__
 #define		__PRINTO_CONVERTER_H__
@@ -51,13 +47,13 @@ typedef enum e_convert_func_type
 
 typedef char* (*t_convert_func)(va_list args);
 
-#define CONVERT_FUNC ({t_convert_func convert_func[NB_OF_CONVERTER]; \
-	convert_func[CONV_INT] = convert_int;		\
-	convert_func[CONV_FLOAT] = convert_float;	\
-	convert_func[CONV_STR] = convert_str;		\
-	convert_func[CONV_CHAR] = convert_char;		\
-	convert_func[CONV_BOOL] = convert_bool;		\
-	convert_func[CONV_PTR] = convert_ptr;		\
-    convert_func;})
+const t_convert_func CONVERT_FUNC[NB_OF_CONVERTER] = {
+	convert_int,
+	convert_float,
+	convert_str,
+	convert_char,
+	convert_bool,
+	convert_ptr
+};
 
 #endif  /*      __PRINTO_CONVERTER_H__    */

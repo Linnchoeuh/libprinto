@@ -47,13 +47,4 @@ typedef enum e_convert_func_type
 
 typedef char* (*t_convert_func)(va_list args);
 
-const t_convert_func CONVERT_FUNC[NB_OF_CONVERTER] = {
-	convert_int,
-	convert_float,
-	convert_str,
-	convert_char,
-	convert_bool,
-	convert_ptr
-};
-
 #endif  /*      __PRINTO_CONVERTER_H__    */

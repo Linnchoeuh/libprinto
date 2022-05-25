@@ -32,7 +32,7 @@
  * @param ... The value to replace the %format
  */
 void printo(char *text,
-			 ...);
+			...);
 
 
 /**
@@ -51,13 +51,13 @@ void printo(char *text,
  * @param ... The value to replace the %format
  */
 void fprinto(int fd,
-			char *text,
-			...);
+			 char *text,
+			 ...);
 
 
 /**
  * @brief Take an str with %formats and return a str with
- * %format by valur in the va_list.
+ * %format by value in the va_list.
  *
  * @tparam %% to write a %.
  * @tparam %d for an int/long.

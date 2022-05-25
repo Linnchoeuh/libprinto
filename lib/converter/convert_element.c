@@ -5,6 +5,7 @@
  **/
 
 #include "printo_converter.h"
+#include "printo_global.h"
 
 char *convert_element(char *elem,
 					va_list args)

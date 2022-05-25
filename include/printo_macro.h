@@ -23,6 +23,4 @@ typedef enum e_flag_type
     NB_OF_FLAGS // always be at the end
   }			t_flag_type;
 
-const char FLAGS[NB_OF_FLAGS] = "%dfscBp";
-
 #endif  /*      __PRINTO_MACRO_H__    */
